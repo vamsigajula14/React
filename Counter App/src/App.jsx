@@ -1,39 +1,19 @@
-import { useState } from 'react'
+import React from "react";
 
+import ProfileCard from "./ProfileCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div style={{margin: "200px 400px",backgroundColor:'lightblue'}}>
-      <div style={{display:"flex",justifyContent:"center",padding:"50px"}}>
-        Counter : {count}
-      </div>
-      <div  style={{display:"flex",justifyContent:"center"}}>
-        <div style={{padding:"25px"}}>
-            <button onClick={
-            ()=>{
-              setCount(count+1)
-            }
-          }>Increment</button>
-        </div>
-        <div style={{padding:"25px"}}>
-            <button onClick={
-            ()=>{
-              setCount(count - 1)
-            }
-          }>Decrement</button>
-        </div>
-        <div style={{padding:"25px"}}>
-            <button onClick={
-            ()=>{
-              setCount(0)
-            }
-          }>Reset</button>
-        </div>
-      </div>
+    <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
+      <ProfileCard
+        name="Vamsi Gajula"
+        age={25}
+        bio="Full-stack developer 🚀 | Loves React"
+        image =  '\src\assets\react.svg'
+        initialFollowers={120}
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
